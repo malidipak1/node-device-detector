@@ -3,7 +3,7 @@ const Piscina = require('piscina');
 const path = require('path');
 require('dotenv').config(); 
 const piscina = new Piscina({
-  filename: path.resolve(__dirname, './detector-worker.js')
+  filename: path.resolve(__dirname, './src/detector-worker.js')
 });
 
 const app = express();
