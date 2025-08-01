@@ -3,6 +3,7 @@
   "version": "2.2.2",
   "description": "Nodejs device detector (port matomo-org/device-detector)",
   "main": "index.js",
+  "type": "commonjs",
   "scripts": {
     "test": "mocha -- -R dot tests/*.spec.js",
     "test-coverage-text": "nyc --check-coverage --lines 90 --per-file --reporter=text mocha -- -R dot tests/*.spec.js",
@@ -36,15 +37,20 @@
     "url": "https://github.com/sanchezzzhak/node-device-detector/issues"
   },
   "homepage": "https://github.com/sanchezzzhak/node-device-detector#readme",
-  "dependencies": {},
+  "dependencies": {
+    "dotenv": "^17.2.1",
+    "express": "^5.1.0",
+    "lru-cache": "^6.0.0",
+    "node-device-detector": "^2.2.2",
+    "piscina": "^5.0.0"
+  },
   "engines": {
     "node": ">= 10.x",
     "npm": ">= 6.x"
   },
   "devDependencies": {
-    "js-yaml": "^4.1.0",
-    "@fast-csv/parse": "^5.0.0",
     "@fast-csv/format": "^5.0.0",
+    "@fast-csv/parse": "^5.0.0",
     "@typescript-eslint/eslint-plugin": "^5.42.1",
     "@typescript-eslint/parser": "^5.42.1",
     "benchmark": "^2.1.4",
@@ -52,6 +58,7 @@
     "cli-table": "^0.3.6",
     "commander": "^11.1.0",
     "eslint": "^8.27.0",
+    "js-yaml": "^4.1.0",
     "mocha": "^10.8.2",
     "prettier": "^2.4.1",
     "typescript": "^4.8.4"
